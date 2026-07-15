@@ -1,0 +1,220 @@
+/* Base Reset & Colors */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #131a2c;
+    --text-color: #ffffff;
+    --accent-color: #00f2fe;
+    --purple-glow: #4facfe;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.neon-text {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #a0aec0;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, var(--purple-glow), var(--accent-color));
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #4a5568;
+    color: var(--text-color);
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Features */
+.features {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.features h2, .pricing h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #2d3748;
+    transition: border 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--accent-color);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 8%;
+    text-align: center;
+    background: #0f1626;
+}
+
+.price-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--bg-color);
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    border: 1px solid #2d3748;
+    position: relative;
+}
+
+.card.premium {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #a0aec0;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    color: #cbd5e0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #718096;
+    border-top: 1px solid #2d3748;
+}
